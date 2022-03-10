@@ -10,5 +10,12 @@
 }
 
 .hovered {
-    background-color: blue;
+    background-color: black;
+}
+
+.clearButton {
+    width: 100%;
+    background-color: purple;
+    color: white;
+    margin: 5px;
 }

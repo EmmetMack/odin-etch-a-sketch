@@ -19,3 +19,11 @@ window.addEventListener('load', createGrid);
 function addColor() {
     this.classList.add('hovered');
 }
+
+function clearGrid() {
+    const squares = document.querySelectorAll('.grid-item');
+    squares.forEach(square => square.classList.remove('hovered'));
+}
+
+const clearButton = document.querySelector('.clearButton');
+clearButton.addEventListener('click', clearGrid);
