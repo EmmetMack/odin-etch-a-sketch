@@ -8,3 +8,7 @@
     border-width: 2px;
     border-style:solid;
 }
+
+.hovered {
+    background-color: blue;
+}
