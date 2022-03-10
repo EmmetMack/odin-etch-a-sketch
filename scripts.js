@@ -22,17 +22,28 @@ function setNumCols(size) {
     for (let i = 0; i < size; i ++ ) {
         colNumString += "auto ";
     }
-    console.log('colNumString', colNumString);
     container.setAttribute('style', `grid-template-columns: ${colNumString}`);
     
 }
 
 window.addEventListener('load', createGrid());
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+  
 
 
 function addColor() {
-    this.classList.add('hovered');
+    const color = getRandomColor();
+    if (this.getAttribute('style') === null) {
+        this.setAttribute('style', `background-color: ${color}`)
+    }
 }
 
 function clearGrid() {
